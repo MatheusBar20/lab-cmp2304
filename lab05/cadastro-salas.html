@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Salas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="menu-navegacao"></header>
+    <hr>
+    <h1>Cadastro de Salas</h1>
+    <hr><br>
+
+    <form id="form-sala">
+        <label for="nomeSala">Nome da Sala:</label>
+        <input type="text" id="nomeSala" required><br><br>
+
+        <label for="capacidade">Capacidade:</label>
+        <input type="number" id="capacidade" required><br><br>
+
+        <label for="tipo">Tipo:</label>
+        <select id="tipo" required>
+            <option value="">Selecione...</option>
+            <option value="2D">2D</option>
+            <option value="3D">3D</option>
+            <option value="IMAX">IMAX</option>
+        </select><br><br>
+
+        <button type="submit">Salvar Sala</button>
+    </form>
+
+    <script src="cinema.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarMenu();
+            // Lógica de cadastro no cinema.js
+            document.getElementById('form-sala').addEventListener('submit', salvarSala);
+        });
+    </script>
+</body>
+</html>

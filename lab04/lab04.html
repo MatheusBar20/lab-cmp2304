@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB04</title>
+</head>
+<body>
+    <a href="/index.html"> HOME </a> <br><br>
+    <hr>
+
+    <h1>Cadastro de Funcionários</h1>
+
+    <form id="form-funcionario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+        <br><br>
+
+        <label for="idade">Idade:</label>
+        <input type="number" id="idade" required>
+        <br><br>
+
+        <label for="cargo">Cargo:</label>
+        <input type="text" id="cargo" required>
+        <br><br>
+
+        <label for="salario">Salário:</label>
+        <input type="number" id="salario" step="0.1" required>
+        <br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <hr>
+
+    <h2>Funcionáriosa Cadastrados</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th bgcolor="gray" width="150">Nome</th>
+                <th bgcolor="gray" width="100">Idade</th>
+                <th bgcolor="gray" width="150">Cargo</th>
+                <th bgcolor="gray" width="100">Salário</th>
+                <th bgcolor="gray" width="100">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela-body">
+            </tbody>
+    </table>
+
+    <hr>
+
+    <h2>Relatórios</h2>
+    <button onclick="listarFuncionários()">Listar Funcionários</button>
+    <button onclick="mostrarMediaSalarios()">Média dos Salários</button>
+    <button onclick="listarCargos()">Listar Cargos</button>
+    <button onclick="listarNomesAlfabetica()">Nomes em Ordem Alfabética</button>
+
+    <div id="relatorios-resultado"></div>
+
+    <script src="lab04.js"></script>
+</body>
+</html>

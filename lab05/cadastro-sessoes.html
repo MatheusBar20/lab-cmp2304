@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Sessões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="menu-navegacao"></header>
+    <hr>
+    <h1>Cadastro de Sessões</h1>
+    <hr><br>
+
+    <form id="form-sessao">
+        <label for="filme">Filme:</label>
+        <select id="filme" required>
+            <option value="">Carregando Filmes...</option>
+        </select><br><br>
+
+        <label for="sala">Sala:</label>
+        <select id="sala" required>
+            <option value="">Carregando Salas...</option>
+        </select><br><br>
+
+        <label for="dataHora">Data e Hora:</label>
+        <input type="datetime-local" id="dataHora" required><br><br>
+
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco" step="0.01" required><br><br>
+
+        <label for="idioma">Idioma:</label>
+        <select id="idioma" required>
+            <option value="">Selecione...</option>
+            <option value="Dublado">Dublado</option>
+            <option value="Legendado">Legendado</option>
+        </select><br><br>
+        
+        <label for="formato">Formato:</label>
+        <select id="formato" required>
+            <option value="">Selecione...</option>
+            <option value="2D">2D</option>
+            <option value="3D">3D</option>
+        </select><br><br>
+
+        <button type="submit">Salvar Sessão</button>
+    </form>
+    
+    <script src="cinema.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarMenu();
+            carregarFilmesESalas(); // Função JS para popular os selects
+            document.getElementById('form-sessao').addEventListener('submit', salvarSessao);
+        });
+    </script>
+</body>
+</html>

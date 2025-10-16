@@ -1,0 +1,17 @@
+#Aluno: Matheus Barbosa Silva
+#Professor: Daniel Corrêa
+#Disciplina: Tecnologia Construção de Software
+# Data: 16/10/2025
+
+version: '3.8'
+
+services:
+  # Nome do seu serviço (pode ser qualquer coisa)
+  rh-app:
+    # Diz ao Docker para construir a imagem usando o Dockerfile na pasta atual
+    build: . 
+    # O Nginx roda na porta 80 por padrão, então acessaremos via http://localhost:8080
+    ports:
+      - "8080:80"
+    restart: always 
+    container_name: rh_matlab03

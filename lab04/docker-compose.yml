@@ -1,0 +1,14 @@
+#Aluno: Matheus Barbosa Silva
+#Professor: Daniel Corrêa
+#Disciplina: Tecnologia Construção de Software
+# Data: 16/10/2025
+
+version: '3.8'
+
+services:
+  rh-app:
+    build: . 
+    ports:
+      - "8081:80"  
+    restart: always 
+    container_name: rh_matlab04

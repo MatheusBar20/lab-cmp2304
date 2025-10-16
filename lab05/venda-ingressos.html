@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Venda de Ingressos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="menu-navegacao"></header>
+    <hr>
+    <h1>Venda de Ingressos</h1>
+    <hr><br>
+    
+    <form id="form-venda">
+        <label for="sessao">Sessão:</label>
+        <select id="sessao" required>
+            <option value="">Carregando Sessões...</option>
+        </select><br><br>
+        
+        <label for="cliente">Nome do Cliente:</label>
+        <input type="text" id="cliente" required><br><br>
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" required><br><br>
+
+        <label for="assento">Assento (Ex: A10):</label>
+        <input type="text" id="assento" required><br><br>
+
+        <label for="pagamento">Tipo de Pagamento:</label>
+        <select id="pagamento" required>
+            <option value="">Selecione...</option>
+            <option value="Cartao">Cartão</option>
+            <option value="Pix">Pix</option>
+            <option value="Dinheiro">Dinheiro</option>
+        </select><br><br>
+
+        <button type="submit">Confirmar Venda</button>
+    </form>
+    <img src="imagens/ingressos.jpg" alt="Venda de Ingressos" style="display:block; margin:auto; width:800px;">
+
+    <script src="cinema.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarMenu();
+            popularSessoesVenda(); // Função JS para popular o select
+            document.getElementById('form-venda').addEventListener('submit', salvarVenda);
+        });
+    </script>
+</body>
+</html>
